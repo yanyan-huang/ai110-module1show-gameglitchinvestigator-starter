@@ -32,14 +32,19 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
   1. I played several games, compared my guess with secret to check if the hints are in the right direction.
   2. I manually clicked the new game button to make sure it can create/restart a new game.
 - Did AI help you design or understand any tests? How?
+  Yes, it helped implementing the tests as requested.
 
 ---
 
 ## 4. What did you learn about Streamlit and state?
 
 - In your own words, explain why the secret number kept changing in the original app.
+  The program is rerun every time you click anything, so random.randint() kept picking a new number each time.
+
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+  Streamlit restarts your code from scratch on every click — session state is like a memory box that survives each restart.
 - What change did you make that finally gave the game a stable secret number?
+Wrapped it in if "secret" not in st.session_state — so it only picks a number once and remembers it.
 
 ---
 
@@ -47,5 +52,8 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+  Prompting strategy: add the specific file name as context variable.
 - What is one thing you would do differently next time you work with AI on a coding task?
+  I would try to understand more about the project structure and main logic, before asking AI to help with specific tasks. so i won't be too dependent on AI to solve all the problems. 
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+  AI is powerful, but human control and understanding is still more important.
